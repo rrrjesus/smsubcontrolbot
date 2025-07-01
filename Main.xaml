@@ -142,7 +142,7 @@
       <x:Boolean x:Key="ShouldExpandAll">False</x:Boolean>
     </scg:Dictionary>
   </sap:WorkflowViewStateService.ViewState>
-  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="986,12423" sap2010:WorkflowViewState.IdRef="Sequence_4">
+  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="986,12471" sap2010:WorkflowViewState.IdRef="Sequence_4">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="planilha_excel" />
       <Variable x:TypeArguments="x:String" Name="extract_text_to_pdf" />
@@ -168,7 +168,7 @@
         <OutArgument x:TypeArguments="x:String">[path_folder_planilha]</OutArgument>
       </Assign.To>
       <Assign.Value>
-        <InArgument x:TypeArguments="x:String">C:\Users\d788796\Documents\UiPath\Smsubcontrol\revisar\revisoes_27062025_v1</InArgument>
+        <InArgument x:TypeArguments="x:String">C:\Users\d788796\Documents\GitHub\smsubcontrolbot\revisar\revisoes_27062025_v1</InArgument>
       </Assign.Value>
     </Assign>
     <Assign sap:VirtualizedContainerService.HintSize="654,114" sap2010:WorkflowViewState.IdRef="Assign_3">
@@ -216,13 +216,13 @@
         <InArgument x:TypeArguments="x:String">\\smsubgbs02\htdocs\smsubcontrol\storage\</InArgument>
       </Assign.Value>
     </Assign>
-    <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[revisoes_27062025_v1]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="654,11773" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
+    <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[revisoes_27062025_v1]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="654,11821" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
       <ui:ForEachRow.Body>
         <ActivityAction x:TypeArguments="sd:DataRow">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="sd:DataRow" Name="row" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Corpo" sap:VirtualizedContainerService.HintSize="620,11586" sap2010:WorkflowViewState.IdRef="Sequence_6">
+          <Sequence DisplayName="Corpo" sap:VirtualizedContainerService.HintSize="620,11634" sap2010:WorkflowViewState.IdRef="Sequence_6">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -268,7 +268,7 @@
                 <InArgument x:TypeArguments="x:String">[row.Item(5).ToString]</InArgument>
               </Assign.Value>
             </Assign>
-            <If Condition="[path_file &lt;&gt; &quot;&quot;]" sap:VirtualizedContainerService.HintSize="586,10851" sap2010:WorkflowViewState.IdRef="If_5">
+            <If Condition="[path_file &lt;&gt; &quot;&quot;]" sap:VirtualizedContainerService.HintSize="586,10899" sap2010:WorkflowViewState.IdRef="If_5">
               <If.Then>
                 <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="552,8668" sap2010:WorkflowViewState.IdRef="Sequence_11">
                   <sap:WorkflowViewStateService.ViewState>
@@ -308,8 +308,8 @@
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
                         </ui:WriteCell>
-                        <ui:MessageBox ChosenButton="{x:Null}" AutoCloseAfter="00:00:18" Buttons="Ok" Caption="GRAVANDO ..." DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="382,117" sap2010:WorkflowViewState.IdRef="MessageBox_90" Text="[&quot;O arquivo contém anexo, mas algum dos itens falhou !!!&quot;]" TopMost="True" />
-                        <ui:MessageBox ChosenButton="{x:Null}" AutoCloseAfter="00:00:18" Buttons="Ok" Caption="GRAVANDO ..." DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="382,108" sap2010:WorkflowViewState.IdRef="MessageBox_91" Text="[&quot;Que pena, o registro &quot; + registro + &quot; no ID :  &quot; + contador_excel.ToString + &quot; não contem os dados necessários ...&quot;]" TopMost="True" />
+                        <ui:MessageBox ChosenButton="{x:Null}" AutoCloseAfter="00:00:03" Buttons="Ok" Caption="GRAVANDO ..." DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="382,117" sap2010:WorkflowViewState.IdRef="MessageBox_90" Text="[&quot;O arquivo contém anexo, mas algum dos itens falhou !!!&quot;]" TopMost="True" />
+                        <ui:MessageBox ChosenButton="{x:Null}" AutoCloseAfter="00:00:03" Buttons="Ok" Caption="GRAVANDO ..." DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="382,108" sap2010:WorkflowViewState.IdRef="MessageBox_91" Text="[&quot;Que pena, o registro &quot; + registro + &quot; no ID :  &quot; + contador_excel.ToString + &quot; não contem os dados necessários ...&quot;]" TopMost="True" />
                       </Sequence>
                     </ui:IfElseIfV2.Else>
                     <ui:IfElseIfV2.ElseIfs>
@@ -348,8 +348,8 @@
                                         </scg:Dictionary>
                                       </sap:WorkflowViewStateService.ViewState>
                                     </ui:WriteCell>
-                                    <ui:MessageBox ChosenButton="{x:Null}" AutoCloseAfter="00:00:18" Buttons="Ok" Caption="GRAVANDO ..." DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="382,117" sap2010:WorkflowViewState.IdRef="MessageBox_72" Text="[&quot;O arquivo contém a palavra : devolvi, o RF e o serial do equipamento !!!&quot;]" TopMost="True" />
-                                    <ui:MessageBox ChosenButton="{x:Null}" AutoCloseAfter="00:00:18" Buttons="Ok" Caption="GRAVANDO ..." DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="382,108" sap2010:WorkflowViewState.IdRef="MessageBox_50" Text="[&quot;O registro &quot; + registro + &quot; no ID :  &quot; + contador_excel.ToString + &quot; foi salvo com sucesso !!!&quot;]" TopMost="True" />
+                                    <ui:MessageBox ChosenButton="{x:Null}" AutoCloseAfter="00:00:03" Buttons="Ok" Caption="GRAVANDO ..." DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="382,117" sap2010:WorkflowViewState.IdRef="MessageBox_72" Text="[&quot;O arquivo contém a palavra : devolvi, o RF e o serial do equipamento !!!&quot;]" TopMost="True" />
+                                    <ui:MessageBox ChosenButton="{x:Null}" AutoCloseAfter="00:00:03" Buttons="Ok" Caption="GRAVANDO ..." DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="382,108" sap2010:WorkflowViewState.IdRef="MessageBox_50" Text="[&quot;O registro &quot; + registro + &quot; no ID :  &quot; + contador_excel.ToString + &quot; foi salvo com sucesso !!!&quot;]" TopMost="True" />
                                   </Sequence>
                                 </If.Then>
                                 <If.Else>
@@ -375,8 +375,8 @@
                                         </scg:Dictionary>
                                       </sap:WorkflowViewStateService.ViewState>
                                     </ui:WriteCell>
-                                    <ui:MessageBox ChosenButton="{x:Null}" AutoCloseAfter="00:00:18" Buttons="Ok" Caption="GRAVANDO ..." DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="382,117" sap2010:WorkflowViewState.IdRef="MessageBox_87" Text="[&quot;O arquivo não contém o conjunto contendo (devolvi, RF e o serial do equipamento) !!!&quot;]" TopMost="True" />
-                                    <ui:MessageBox ChosenButton="{x:Null}" AutoCloseAfter="00:00:18" Buttons="Ok" Caption="GRAVANDO ..." DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="382,108" sap2010:WorkflowViewState.IdRef="MessageBox_51" Text="[&quot;Que pena, o registro &quot; + registro + &quot; no ID :  &quot; + contador_excel.ToString + &quot; não contem os dados necessários ...&quot;]" TopMost="True" />
+                                    <ui:MessageBox ChosenButton="{x:Null}" AutoCloseAfter="00:00:03" Buttons="Ok" Caption="GRAVANDO ..." DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="382,117" sap2010:WorkflowViewState.IdRef="MessageBox_87" Text="[&quot;O arquivo não contém o conjunto contendo (devolvi, RF e o serial do equipamento) !!!&quot;]" TopMost="True" />
+                                    <ui:MessageBox ChosenButton="{x:Null}" AutoCloseAfter="00:00:03" Buttons="Ok" Caption="GRAVANDO ..." DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="382,108" sap2010:WorkflowViewState.IdRef="MessageBox_51" Text="[&quot;Que pena, o registro &quot; + registro + &quot; no ID :  &quot; + contador_excel.ToString + &quot; não contem os dados necessários ...&quot;]" TopMost="True" />
                                   </Sequence>
                                 </If.Else>
                               </If>
@@ -391,7 +391,7 @@
                                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
-                              <ui:MessageBox ChosenButton="{x:Null}" AutoCloseAfter="00:00:18" Buttons="Ok" Caption="GRAVANDO ..." DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="450,117" sap2010:WorkflowViewState.IdRef="MessageBox_55" Text="[&quot;ID : &quot; + contador_excel.ToString + &quot;, encontrei o estado &quot; + estado + &quot; no registro !!!&quot;]" TopMost="True" />
+                              <ui:MessageBox ChosenButton="{x:Null}" AutoCloseAfter="00:00:03" Buttons="Ok" Caption="GRAVANDO ..." DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="450,117" sap2010:WorkflowViewState.IdRef="MessageBox_55" Text="[&quot;ID : &quot; + contador_excel.ToString + &quot;, encontrei o estado &quot; + estado + &quot; no registro !!!&quot;]" TopMost="True" />
                               <If Condition="[extract_text_to_pdf.ToString.Contains(&quot;Boletim&quot;)]" sap:VirtualizedContainerService.HintSize="450,1323" sap2010:WorkflowViewState.IdRef="If_10">
                                 <If.Then>
                                   <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="416,581" sap2010:WorkflowViewState.IdRef="Sequence_25">
@@ -416,8 +416,8 @@
                                         </scg:Dictionary>
                                       </sap:WorkflowViewStateService.ViewState>
                                     </ui:WriteCell>
-                                    <ui:MessageBox ChosenButton="{x:Null}" AutoCloseAfter="00:00:18" Buttons="Ok" Caption="GRAVANDO ..." DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="382,117" sap2010:WorkflowViewState.IdRef="MessageBox_24" Text="[&quot;O arquivo contém a palavra : Boletim !!!&quot;]" TopMost="True" />
-                                    <ui:MessageBox ChosenButton="{x:Null}" AutoCloseAfter="00:00:18" Buttons="Ok" Caption="GRAVANDO ..." DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="382,108" sap2010:WorkflowViewState.IdRef="MessageBox_60" Text="[&quot;O registro &quot; + registro + &quot; no ID :  &quot; + contador_excel.ToString + &quot; foi salvo com sucesso !!!&quot;]" TopMost="True" />
+                                    <ui:MessageBox ChosenButton="{x:Null}" AutoCloseAfter="00:00:03" Buttons="Ok" Caption="GRAVANDO ..." DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="382,117" sap2010:WorkflowViewState.IdRef="MessageBox_24" Text="[&quot;O arquivo contém a palavra : Boletim !!!&quot;]" TopMost="True" />
+                                    <ui:MessageBox ChosenButton="{x:Null}" AutoCloseAfter="00:00:03" Buttons="Ok" Caption="GRAVANDO ..." DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="382,108" sap2010:WorkflowViewState.IdRef="MessageBox_60" Text="[&quot;O registro &quot; + registro + &quot; no ID :  &quot; + contador_excel.ToString + &quot; foi salvo com sucesso !!!&quot;]" TopMost="True" />
                                   </Sequence>
                                 </If.Then>
                                 <If.Else>
@@ -443,8 +443,8 @@
                                         </scg:Dictionary>
                                       </sap:WorkflowViewStateService.ViewState>
                                     </ui:WriteCell>
-                                    <ui:MessageBox ChosenButton="{x:Null}" AutoCloseAfter="00:00:18" Buttons="Ok" Caption="GRAVANDO ..." DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="382,117" sap2010:WorkflowViewState.IdRef="MessageBox_88" Text="[&quot;O arquivo não contém a palavra : Boletim !!!&quot;]" TopMost="True" />
-                                    <ui:MessageBox ChosenButton="{x:Null}" AutoCloseAfter="00:00:18" Buttons="Ok" Caption="GRAVANDO ..." DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="382,108" sap2010:WorkflowViewState.IdRef="MessageBox_52" Text="[&quot;Que pena, o registro &quot; + registro + &quot; no ID :  &quot; + contador_excel.ToString + &quot; não contem os dados necessários ...&quot;]" TopMost="True" />
+                                    <ui:MessageBox ChosenButton="{x:Null}" AutoCloseAfter="00:00:03" Buttons="Ok" Caption="GRAVANDO ..." DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="382,117" sap2010:WorkflowViewState.IdRef="MessageBox_88" Text="[&quot;O arquivo não contém a palavra : Boletim !!!&quot;]" TopMost="True" />
+                                    <ui:MessageBox ChosenButton="{x:Null}" AutoCloseAfter="00:00:03" Buttons="Ok" Caption="GRAVANDO ..." DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="382,108" sap2010:WorkflowViewState.IdRef="MessageBox_52" Text="[&quot;Que pena, o registro &quot; + registro + &quot; no ID :  &quot; + contador_excel.ToString + &quot; não contem os dados necessários ...&quot;]" TopMost="True" />
                                   </Sequence>
                                 </If.Else>
                               </If>
@@ -459,7 +459,7 @@
                                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
-                              <ui:MessageBox ChosenButton="{x:Null}" AutoCloseAfter="00:00:18" Buttons="Ok" Caption="GRAVANDO ..." DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="450,117" sap2010:WorkflowViewState.IdRef="MessageBox_56" Text="[&quot;ID : &quot; + contador_excel.ToString + &quot;, encontrei o estado &quot; + estado + &quot; no registro !!!&quot;]" TopMost="True" />
+                              <ui:MessageBox ChosenButton="{x:Null}" AutoCloseAfter="00:00:03" Buttons="Ok" Caption="GRAVANDO ..." DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="450,117" sap2010:WorkflowViewState.IdRef="MessageBox_56" Text="[&quot;ID : &quot; + contador_excel.ToString + &quot;, encontrei o estado &quot; + estado + &quot; no registro !!!&quot;]" TopMost="True" />
                               <If Condition="[extract_text_to_pdf.ToString.Contains(&quot;RECEBI&quot;) OR extract_text_to_pdf.ToString.Contains(&quot;devolvi&quot;) OR extract_text_to_pdf.ToString.Contains(&quot;Boletim&quot;)]" sap:VirtualizedContainerService.HintSize="450,1323" sap2010:WorkflowViewState.IdRef="If_13">
                                 <If.Then>
                                   <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="416,581" sap2010:WorkflowViewState.IdRef="Sequence_29">
@@ -484,8 +484,8 @@
                                         </scg:Dictionary>
                                       </sap:WorkflowViewStateService.ViewState>
                                     </ui:WriteCell>
-                                    <ui:MessageBox ChosenButton="{x:Null}" AutoCloseAfter="00:00:18" Buttons="Ok" Caption="GRAVANDO ..." DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="382,117" sap2010:WorkflowViewState.IdRef="MessageBox_73" Text="[&quot;O registro &quot; + registro + &quot; no ID :  &quot; + contador_excel.ToString + &quot; contém o RF do servidor !!!&quot;]" TopMost="True" />
-                                    <ui:MessageBox ChosenButton="{x:Null}" AutoCloseAfter="00:00:18" Buttons="Ok" Caption="GRAVANDO ..." DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="382,108" sap2010:WorkflowViewState.IdRef="MessageBox_62" Text="[&quot;O registro &quot; + registro + &quot; no ID :  &quot; + contador_excel.ToString + &quot; foi salvo com sucesso !!!&quot;]" TopMost="True" />
+                                    <ui:MessageBox ChosenButton="{x:Null}" AutoCloseAfter="00:00:03" Buttons="Ok" Caption="GRAVANDO ..." DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="382,117" sap2010:WorkflowViewState.IdRef="MessageBox_73" Text="[&quot;O registro &quot; + registro + &quot; no ID :  &quot; + contador_excel.ToString + &quot; contém o RF do servidor !!!&quot;]" TopMost="True" />
+                                    <ui:MessageBox ChosenButton="{x:Null}" AutoCloseAfter="00:00:03" Buttons="Ok" Caption="GRAVANDO ..." DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="382,108" sap2010:WorkflowViewState.IdRef="MessageBox_62" Text="[&quot;O registro &quot; + registro + &quot; no ID :  &quot; + contador_excel.ToString + &quot; foi salvo com sucesso !!!&quot;]" TopMost="True" />
                                   </Sequence>
                                 </If.Then>
                                 <If.Else>
@@ -511,8 +511,8 @@
                                         </scg:Dictionary>
                                       </sap:WorkflowViewStateService.ViewState>
                                     </ui:WriteCell>
-                                    <ui:MessageBox ChosenButton="{x:Null}" AutoCloseAfter="00:00:18" Buttons="Ok" Caption="GRAVANDO ..." DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="382,117" sap2010:WorkflowViewState.IdRef="MessageBox_53" Text="[&quot;O registro &quot; + registro + &quot; no ID :  &quot; + contador_excel.ToString + &quot; não contem RF ...&quot;]" TopMost="True" />
-                                    <ui:MessageBox ChosenButton="{x:Null}" AutoCloseAfter="00:00:18" Buttons="Ok" Caption="GRAVANDO ..." DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="382,108" sap2010:WorkflowViewState.IdRef="MessageBox_74" Text="[&quot;O registro &quot; + registro + &quot; no ID :  &quot; + contador_excel.ToString + &quot; foi salvo com sucesso !!!&quot;]" TopMost="True" />
+                                    <ui:MessageBox ChosenButton="{x:Null}" AutoCloseAfter="00:00:03" Buttons="Ok" Caption="GRAVANDO ..." DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="382,117" sap2010:WorkflowViewState.IdRef="MessageBox_53" Text="[&quot;O registro &quot; + registro + &quot; no ID :  &quot; + contador_excel.ToString + &quot; não contem RF ...&quot;]" TopMost="True" />
+                                    <ui:MessageBox ChosenButton="{x:Null}" AutoCloseAfter="00:00:03" Buttons="Ok" Caption="GRAVANDO ..." DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="382,108" sap2010:WorkflowViewState.IdRef="MessageBox_74" Text="[&quot;O registro &quot; + registro + &quot; no ID :  &quot; + contador_excel.ToString + &quot; foi salvo com sucesso !!!&quot;]" TopMost="True" />
                                   </Sequence>
                                 </If.Else>
                               </If>
@@ -527,7 +527,7 @@
                                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
-                              <ui:MessageBox ChosenButton="{x:Null}" AutoCloseAfter="00:00:18" Buttons="Ok" Caption="GRAVANDO ..." DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="450,117" sap2010:WorkflowViewState.IdRef="MessageBox_57" Text="[&quot;ID : &quot; + contador_excel.ToString + &quot;, encontrei o estado &quot; + estado + &quot; no registro !!!&quot;]" TopMost="True" />
+                              <ui:MessageBox ChosenButton="{x:Null}" AutoCloseAfter="00:00:03" Buttons="Ok" Caption="GRAVANDO ..." DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="450,117" sap2010:WorkflowViewState.IdRef="MessageBox_57" Text="[&quot;ID : &quot; + contador_excel.ToString + &quot;, encontrei o estado &quot; + estado + &quot; no registro !!!&quot;]" TopMost="True" />
                               <If Condition="[extract_text_to_pdf.ToString.Contains(part_number) AND extract_text_to_pdf.ToString.Contains(rf_servidor) AND extract_text_to_pdf.ToString.Contains(&quot;RECEBI&quot;)]" sap:VirtualizedContainerService.HintSize="450,1323" sap2010:WorkflowViewState.IdRef="If_14">
                                 <If.Then>
                                   <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="416,581" sap2010:WorkflowViewState.IdRef="Sequence_32">
@@ -552,8 +552,8 @@
                                         </scg:Dictionary>
                                       </sap:WorkflowViewStateService.ViewState>
                                     </ui:WriteCell>
-                                    <ui:MessageBox ChosenButton="{x:Null}" AutoCloseAfter="00:00:18" Buttons="Ok" Caption="GRAVANDO ..." DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="382,117" sap2010:WorkflowViewState.IdRef="MessageBox_81" Text="[&quot;O arquivo contém a palavra : RECEBI, o RF e o serial do equipamento !!!&quot;]" TopMost="True" />
-                                    <ui:MessageBox ChosenButton="{x:Null}" AutoCloseAfter="00:00:18" Buttons="Ok" Caption="GRAVANDO ..." DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="382,108" sap2010:WorkflowViewState.IdRef="MessageBox_82" Text="[&quot;O registro &quot; + registro + &quot; no ID :  &quot; + contador_excel.ToString + &quot; foi salvo com sucesso !!!&quot;]" TopMost="True" />
+                                    <ui:MessageBox ChosenButton="{x:Null}" AutoCloseAfter="00:00:03" Buttons="Ok" Caption="GRAVANDO ..." DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="382,117" sap2010:WorkflowViewState.IdRef="MessageBox_81" Text="[&quot;O arquivo contém a palavra : RECEBI, o RF e o serial do equipamento !!!&quot;]" TopMost="True" />
+                                    <ui:MessageBox ChosenButton="{x:Null}" AutoCloseAfter="00:00:03" Buttons="Ok" Caption="GRAVANDO ..." DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="382,108" sap2010:WorkflowViewState.IdRef="MessageBox_82" Text="[&quot;O registro &quot; + registro + &quot; no ID :  &quot; + contador_excel.ToString + &quot; foi salvo com sucesso !!!&quot;]" TopMost="True" />
                                   </Sequence>
                                 </If.Then>
                                 <If.Else>
@@ -579,8 +579,8 @@
                                         </scg:Dictionary>
                                       </sap:WorkflowViewStateService.ViewState>
                                     </ui:WriteCell>
-                                    <ui:MessageBox ChosenButton="{x:Null}" AutoCloseAfter="00:00:18" Buttons="Ok" Caption="GRAVANDO ..." DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="382,117" sap2010:WorkflowViewState.IdRef="MessageBox_89" Text="[&quot;O arquivo não contém a palavra : RECEBI, o RF e o serial do equipamento !!!&quot;]" TopMost="True" />
-                                    <ui:MessageBox ChosenButton="{x:Null}" AutoCloseAfter="00:00:18" Buttons="Ok" Caption="GRAVANDO ..." DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="382,108" sap2010:WorkflowViewState.IdRef="MessageBox_83" Text="[&quot;Que pena, o registro &quot; + registro + &quot; no ID :  &quot; + contador_excel.ToString + &quot; não contem os dados necessários ...&quot;]" TopMost="True" />
+                                    <ui:MessageBox ChosenButton="{x:Null}" AutoCloseAfter="00:00:03" Buttons="Ok" Caption="GRAVANDO ..." DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="382,117" sap2010:WorkflowViewState.IdRef="MessageBox_89" Text="[&quot;O arquivo não contém a palavra : RECEBI, o RF e o serial do equipamento !!!&quot;]" TopMost="True" />
+                                    <ui:MessageBox ChosenButton="{x:Null}" AutoCloseAfter="00:00:03" Buttons="Ok" Caption="GRAVANDO ..." DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="382,108" sap2010:WorkflowViewState.IdRef="MessageBox_83" Text="[&quot;Que pena, o registro &quot; + registro + &quot; no ID :  &quot; + contador_excel.ToString + &quot; não contem os dados necessários ...&quot;]" TopMost="True" />
                                   </Sequence>
                                 </If.Else>
                               </If>
@@ -659,13 +659,13 @@
                 </Sequence>
               </If.Then>
               <If.Else>
-                <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="488,2013" sap2010:WorkflowViewState.IdRef="Sequence_12">
+                <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="484,2061" sap2010:WorkflowViewState.IdRef="Sequence_12">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <ui:IfElseIfV2 Condition="[estado = &quot;ESTOQUE&quot; AND path_file = &quot;&quot;]" DisplayName="Else If" sap:VirtualizedContainerService.HintSize="454,1953" sap2010:WorkflowViewState.IdRef="IfElseIfV2_2">
+                  <ui:IfElseIfV2 Condition="[estado = &quot;ESTOQUE&quot; AND path_file = &quot;&quot;]" DisplayName="Else If" sap:VirtualizedContainerService.HintSize="450,2001" sap2010:WorkflowViewState.IdRef="IfElseIfV2_2">
                     <ui:IfElseIfV2.Else>
                       <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,581" sap2010:WorkflowViewState.IdRef="Sequence_81">
                         <sap:WorkflowViewStateService.ViewState>
@@ -689,8 +689,8 @@
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
                         </ui:WriteCell>
-                        <ui:MessageBox ChosenButton="{x:Null}" AutoCloseAfter="00:00:18" Buttons="Ok" Caption="GRAVANDO ..." DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="382,117" sap2010:WorkflowViewState.IdRef="MessageBox_44" Text="[&quot;Algo está errado ...&quot;]" TopMost="True" />
-                        <ui:MessageBox ChosenButton="{x:Null}" AutoCloseAfter="00:00:18" Buttons="Ok" Caption="GRAVANDO ..." DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="382,108" sap2010:WorkflowViewState.IdRef="MessageBox_92" Text="[&quot;Não consegui localizar nada ...&quot;]" TopMost="True" />
+                        <ui:MessageBox ChosenButton="{x:Null}" AutoCloseAfter="00:00:03" Buttons="Ok" Caption="GRAVANDO ..." DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="382,117" sap2010:WorkflowViewState.IdRef="MessageBox_44" Text="[&quot;Algo está errado ...&quot;]" TopMost="True" />
+                        <ui:MessageBox ChosenButton="{x:Null}" AutoCloseAfter="00:00:03" Buttons="Ok" Caption="GRAVANDO ..." DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="382,108" sap2010:WorkflowViewState.IdRef="MessageBox_92" Text="[&quot;Não consegui localizar nada ...&quot;]" TopMost="True" />
                       </Sequence>
                     </ui:IfElseIfV2.Else>
                     <ui:IfElseIfV2.ElseIfs>
@@ -719,8 +719,8 @@
                                   </scg:Dictionary>
                                 </sap:WorkflowViewStateService.ViewState>
                               </ui:WriteCell>
-                              <ui:MessageBox ChosenButton="{x:Null}" AutoCloseAfter="00:00:18" Buttons="Ok" Caption="GRAVANDO ..." DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="382,117" sap2010:WorkflowViewState.IdRef="MessageBox_69" Text="[&quot;O registro : &quot; + registro + &quot;está sem anexo !!!&quot;]" TopMost="True" />
-                              <ui:MessageBox ChosenButton="{x:Null}" AutoCloseAfter="00:00:18" Buttons="Ok" Caption="GRAVANDO ..." DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="382,108" sap2010:WorkflowViewState.IdRef="MessageBox_68" Text="[&quot;O registro &quot; + registro + &quot; no ID :  &quot; + contador_excel.ToString + &quot; foi salvo com sucesso !!!&quot;]" TopMost="True" />
+                              <ui:MessageBox ChosenButton="{x:Null}" AutoCloseAfter="00:00:03" Buttons="Ok" Caption="GRAVANDO ..." DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="382,117" sap2010:WorkflowViewState.IdRef="MessageBox_69" Text="[&quot;O registro : &quot; + registro + &quot;está sem anexo !!!&quot;]" TopMost="True" />
+                              <ui:MessageBox ChosenButton="{x:Null}" AutoCloseAfter="00:00:03" Buttons="Ok" Caption="GRAVANDO ..." DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="382,108" sap2010:WorkflowViewState.IdRef="MessageBox_68" Text="[&quot;O registro &quot; + registro + &quot; no ID :  &quot; + contador_excel.ToString + &quot; foi salvo com sucesso !!!&quot;]" TopMost="True" />
                             </Sequence>
                           </ui:IfElseIfBlock.Then>
                         </ui:IfElseIfBlock>
@@ -749,8 +749,8 @@
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
                         </ui:WriteCell>
-                        <ui:MessageBox ChosenButton="{x:Null}" AutoCloseAfter="00:00:18" Buttons="Ok" Caption="GRAVANDO ..." DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="382,117" sap2010:WorkflowViewState.IdRef="MessageBox_84" Text="[&quot;O registro : &quot; + registro + &quot;está sem anexo !!!&quot;]" TopMost="True" />
-                        <ui:MessageBox ChosenButton="{x:Null}" AutoCloseAfter="00:00:18" Buttons="Ok" Caption="GRAVANDO ..." DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="382,108" sap2010:WorkflowViewState.IdRef="MessageBox_66" Text="[&quot;O registro &quot; + registro + &quot; no ID :  &quot; + contador_excel.ToString + &quot; foi salvo com sucesso !!!&quot;]" TopMost="True">
+                        <ui:MessageBox ChosenButton="{x:Null}" AutoCloseAfter="00:00:03" Buttons="Ok" Caption="GRAVANDO ..." DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="382,117" sap2010:WorkflowViewState.IdRef="MessageBox_84" Text="[&quot;O registro : &quot; + registro + &quot;está sem anexo !!!&quot;]" TopMost="True" />
+                        <ui:MessageBox ChosenButton="{x:Null}" AutoCloseAfter="00:00:03" Buttons="Ok" Caption="GRAVANDO ..." DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="382,108" sap2010:WorkflowViewState.IdRef="MessageBox_66" Text="[&quot;O registro &quot; + registro + &quot; no ID :  &quot; + contador_excel.ToString + &quot; foi salvo com sucesso !!!&quot;]" TopMost="True">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -764,7 +764,7 @@
                 </Sequence>
               </If.Else>
             </If>
-            <Assign DisplayName="Contador" sap:VirtualizedContainerService.HintSize="490,105" sap2010:WorkflowViewState.IdRef="Assign_10">
+            <Assign DisplayName="Contador" sap:VirtualizedContainerService.HintSize="586,105" sap2010:WorkflowViewState.IdRef="Assign_10">
               <Assign.To>
                 <OutArgument x:TypeArguments="x:Int32">[contador_excel]</OutArgument>
               </Assign.To>
