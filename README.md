@@ -1,4 +1,4 @@
-### smsubcontrolbot - Validação automatizada de termos de empréstimo
+### Smsubcontrolbot - Validação automatizada de termos de empréstimo
 
 O **smsubcontrolbot** é uma solução de automação robótica de processos (RPA) projetada para otimizar e validar o processo de empréstimo de equipamentos. Este robô automatiza a verificação de termos de empréstimo anexados em formato PDF, garantindo que as informações contidas nos documentos correspondam aos dados registrados no sistema.
 
