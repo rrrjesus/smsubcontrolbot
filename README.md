@@ -1,6 +1,3 @@
-Olá! Para o seu projeto no GitHub, a seguinte descrição para o sistema RPA **smsubcontrolbot** é uma ótima forma de apresentar a sua automação.
-
----
 ### smsubcontrolbot - Validação automatizada de termos de empréstimo
 
 O **smsubcontrolbot** é uma solução de automação robótica de processos (RPA) projetada para otimizar e validar o processo de empréstimo de equipamentos. Este robô automatiza a verificação de termos de empréstimo anexados em formato PDF, garantindo que as informações contidas nos documentos correspondam aos dados registrados no sistema.
@@ -22,6 +19,3 @@ O fluxo de trabalho do **smsubcontrolbot** é o seguinte:
 O principal objetivo do **smsubcontrolbot** é garantir a integridade e a precisão dos dados, automatizando um processo manual, repetitivo e propenso a erros. Ao confrontar as informações dos termos de empréstimo em PDF com os registros do sistema, o robô assegura que cada empréstimo está devidamente documentado e validado, economizando tempo e recursos, além de reduzir o risco de inconsistências.
 
 **Palavras-chave**: RPA, automação, Python, PDF, Excel, validação de dados, OCR.
-
----
-Se precisar de ajuda para detalhar mais alguma parte do projeto ou criar um `README.md` completo, é só me dizer!
